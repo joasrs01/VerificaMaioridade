@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Página Teste</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            background-color: lightslategray;
+            margin: 30px;
+            padding: 0;
+            border: 0;
+            text-align: center;
+        }
+        #campos {
+            text-align: right;
+        }
+        #cabecalho{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<script>s
+    function VerificarMaioridade() {
+        //let usa somente dentro do escopo, var utiliza globalmente
+        let iIdade = parseInt(document.form1.txtIdade.value);
+        let sMensagem = isNaN(iIdade) ? "Valor digitado inválido" : (iIdade >= 18 ? "Você é maior de Idade" : "Você não é maior de idade");
+
+        alert(sMensagem);
+    }
+</script>
+
+<body>
+    <div id="principal">
+        <form name="form1" method="post" action="">
+            <table id="tabelaCampos" align="center">
+                <tr>
+                    <td>
+                        <label id = "cabecalho">Verifique se você é maior de idade!</label>
+                        <div id="campos">
+                            <div id="pegarIdade">
+                                <br>
+                                <label>Informe a sua idade:</label>
+                                <input name="textoIdade" id="txtIdade" size="10" type="text">
+                            </div>
+                            <div id="botao">
+                                <input name="btnCalcular" value="Calcular" onclick="VerificarMaioridade() "
+                                    type="button">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
